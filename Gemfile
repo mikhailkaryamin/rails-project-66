@@ -62,11 +62,14 @@ end
 group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'webmock'
 end
 
 group :production do
   gem 'pg'
 end
+
+gem 'enumerize'
 
 gem 'faker', '~> 3.3', '>= 3.3.1'
 gem 'minitest-power_assert', '~> 0.3.1'
