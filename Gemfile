@@ -67,7 +67,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 1.5', '>= 1.5.6'
+  gem 'pg'
 end
 
 gem 'aasm', '~> 5.5'
