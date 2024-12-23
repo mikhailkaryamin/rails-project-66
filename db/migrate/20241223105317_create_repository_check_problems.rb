@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateRepositoryCheckProblems < ActiveRecord::Migration[7.1]
   def change
     create_table :repository_check_problems do |t|

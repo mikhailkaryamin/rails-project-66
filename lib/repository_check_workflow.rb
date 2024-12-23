@@ -15,6 +15,7 @@ module RepositoryCheckWorkflow
       prepare_work_dir work_dir
       _, _, status = Open3.capture3("git clone #{clone_url} .", chdir: work_dir)
       raise "Failed to clone repository from #{clone_url}" unless status.success?
+
       last_commit_sha, = Open3.capture3('git log --format="%h" -n 1', chdir: work_dir)
 
       last_commit_sha.chomp
