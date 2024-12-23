@@ -11,8 +11,8 @@ ru:
       repository/check:
         commit_id: ID Коммита
         repository: Репозиторий
-        state: Статус
-        states:
+        aasm_state: State
+        aasm_states:
           Created: Создана
           In progress: В процессе
           Failed: Прервана
@@ -31,3 +31,9 @@ ru:
         message: Сообщение
         rule: Идентификатор правила
         location: Строка и символ
+    errors:
+      models:
+        repository:
+          attributes:
+            github_id:
+              blank: не может быть пустым

@@ -18,9 +18,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_23_105317) do
     t.string "language"
     t.string "clone_url"
     t.string "ssh_url"
+    t.string "html_url"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["github_id"], name: "index_repositories_on_github_id", unique: true
     t.index ["user_id"], name: "index_repositories_on_user_id"
   end
 
@@ -47,7 +49,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_23_105317) do
   create_table "repository_checks", force: :cascade do |t|
     t.string "commit_id"
     t.integer "repository_id", null: false
-    t.string "state", default: "created", null: false
+    t.string "aasm_state", default: "created", null: false
     t.boolean "passed", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

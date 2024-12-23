@@ -3,11 +3,11 @@
 one:
   commit_id: 1
   repository: one
-  state: created
-  passed: false
+  aasm_state: created
+  passed: true
 
 two:
   commit_id: 2
   repository: two
-  state: in_progress
-  passed: false
+  aasm_state: in_progress
+  passed: true

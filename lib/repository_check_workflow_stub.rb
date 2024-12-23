@@ -12,11 +12,11 @@ module RepositoryCheckWorkflowStub
       {
         'files' => [
           {
-            'path' => 'Gemfile',
+            'path' => 'app/controllers/api/checks_controller.rb',
             'offenses' => []
           },
           {
-            'path' => 'abc.gemspec',
+            'path' => 'app/controllers/application_controller.rb',
             'offenses' => []
           }
         ]
