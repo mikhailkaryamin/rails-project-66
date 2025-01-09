@@ -6,7 +6,7 @@ class CreateRepositoryChecks < ActiveRecord::Migration[7.1]
       t.string :commit_id
       t.references :repository, null: false, foreign_key: true
       t.string :aasm_state, null: false, default: 'created'
-      t.boolean 'passed'
+      t.boolean :passed, null: false, default: false
 
       t.timestamps
     end

@@ -23,6 +23,7 @@ module RepositoryCheckWorkflow
 
     def lint_repo(command, work_dir)
       result, = Open3.capture3(command, chdir: work_dir)
+
       JSON.parse(result)
     end
   end
