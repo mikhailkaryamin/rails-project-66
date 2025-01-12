@@ -77,11 +77,8 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name: ENV.fetch('MAILER_USER', nil),
-    password: ENV.fetch('MAILER_PSWD', nil),
     address: ENV.fetch('MAILER_HOST', nil),
     port: ENV.fetch('MAILER_PORT', nil),
-    authentication: :login
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
